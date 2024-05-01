@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIGAD TUBE</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+header {
+    background-color: #070cff;
+    color: rgb(255, 250, 250);
+    padding: 50px 10px;
+    text-align: left;
+    background-image: url('#');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255); /* Cor do texto */
+    font-size: 17px; /* Tamanho do texto */
+}
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 19px; /* Tamanho do texto */
+}
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 20px;
+    display: none; /* Oculta todas as seções inicialmente */
+}
+h2 {
+    border-bottom: 1px solid #070cff;
+    padding-bottom: 5px;
+}
+.video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    color: rgb(255, 255, 255);
+}
+.video-item {
+    position: relative; /* Permite posicionar o título sobre o vídeo */
+}
+.video-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 4, 253, 0.7);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    text-align: center;
+    z-index: 1; /* Garante que o título fique sobre o vídeo */
+    font-size: 17px; /* Tamanho do texto */
+}
+.video-list .video-cover {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Tamanho fixo para evitar aumento após busca */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-list .video-cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-list .video-cover iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Esconde o iframe inicialmente */
+}
+
+.file-item a {
+    display: block;
+    background-color: #f9f9f9;
+    padding: 10px;
+    text-decoration: none;
+    color: #1100ff;
+}
+
+footer {
+    background-color: #070cff;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>CIGADTUBE</h1>
+<nav>
+<a href="#" onclick="showCategory('all')">PÁGINA INICIAL</a>
+<a href="#" onclick="showCategory('habitacional')">HABITACIONAL</a>
+<a href="#" onclick="showCategory('comercial_pf')">COMERCIAL PF</a>
+<a href="#" onclick="showCategory('comercial_pj')">COMERCIAL PJ</a>
+<a href="#" onclick="showCategory('campanha')">CAMPANHA</a>
+<a href="#" onclick="showCategory('rural')">RURAL</a>
+<a href="#" onclick="showCategory('operacional')">OPERACIONAL</a>
+<a href="#" onclick="showCategory('arquivos')">ARQUIVOS</a>
+</nav>
+</header>
+<main>
+<input type="text" id="searchInput" placeholder="Digite sua busca...">
+<section id="habitacionalVideos">
+<h2>HABITACIONAL</h2>
+<div class="video-list">
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO</div>
+    </div>
+
+    <!-- Adicione mais vídeos habitacionais aqui -->
+</div>
+</section>
+<section id="comercial_pfVideos">
+<h2>COMERCIAL PF</h2>
+<div class="video-list">
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">ACORDO AEV</div>
+    </div>
+    <!-- Adicione vídeos comerciais PF aqui -->
+</div>
+</section>
+<section id="comercial_pjVideos">
+<h2>COMERCIAL PJ</h2>
+<div class="video-list">
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO EXCEPCIONAL</div>
+    </div>
+    <!-- Adicione vídeos comerciais PJ aqui -->
+</div>
+</section>
+<section id="campanhaVideos">
+<h2>CAMPANHA</h2>
+<div class="video-list">
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO ESPECIAL</div>
+    </div>
+    <!-- Adicione vídeos de campanha aqui -->
+</div>
+</section>
+<section id="ruralVideos">
+<h2>RURAL</h2>
+<div class="video-list">
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">INCORPORAÇÃO GERAL</div>
+    </div>
+    <!-- Adicione vídeos rurais aqui -->
+</div>
+</section>
+<section id="operacionalVideos">
+<h2>OPERACIONAL</h2>
+<div class="video-list">
+    <div class="video-item">
+        <div class="video-cover" data-video-url="https://www.youtube.com/watch?v=0gsRRp3Yiq0">
+            <img src="imagem/caixa-lucro.jpg" alt="Capa do vídeo">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0gsRRp3Yiq0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-title">PAUSA CALAMIDADE</div>
+    </div>
+    <!-- Adicione vídeos operacionais aqui -->
+</div>
+</section>
+<section id="arquivosVideos"><!-- Palavra Vídeos deve permanecer da frente no mnome da Seção para reconhecimento de comando -->
+    <h2>ARQUIVOS</h2>
+    <ul class="file-list" id="jpgFiles">
+        <li class="file-item"><a href="imagem/caixa-lucro.jpg" target="_blank">INCORPORAÇÃO</a></li>
+        <li class="file-item"><a href="imagem/caixa-lucro.jpg" target="_blank">CAMPANHA</a></li>
+        <!-- Adicione mais arquivos -->
+    </ul>
+    </section>
+</main>
+<footer>
+<p>&copy; 2024 CIGAD GO. #INTERNO CAIXA.</p>
+</footer>
+<script>
+    // Função para adicionar capas aos vídeos
+    function adicionarCapas() {
+        document.querySelectorAll('.video-cover').forEach(videoCover => {
+            videoCover.addEventListener('click', function() {
+                const videoUrl = this.dataset.videoUrl;
+                window.open(videoUrl, '_blank');
+            });
+        });
+    }
+    
+    // Função para exibir vídeos de uma categoria específica ou todos os vídeos
+    function showCategory(category) {
+        document.querySelectorAll('section').forEach(section => {
+            section.style.display = 'none'; // Oculta todas as seções
+        });
+    
+        if (category === 'all') {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'block'; // Exibe todas as seções
+            });
+        } else {
+            const selectedSection = document.getElementById(category + 'Videos');
+            if (selectedSection) {
+                selectedSection.style.display = 'block'; // Exibe apenas a seção selecionada
+            }
+        }
+    }
+    
+    // Função para filtrar vídeos e documentos com base na busca
+    function filterContent(searchTerm) {
+        const sections = document.querySelectorAll('section');
+    
+        sections.forEach(section => {
+            let hasVisibleItems = false;
+            const items = section.querySelectorAll('.video-item, .file-item');
+    
+            items.forEach(item => {
+                const title = item.textContent.toLowerCase();
+    
+                if (title.includes(searchTerm)) {
+                    item.style.display = 'block'; // Exibe o item se o título corresponder à busca
+                    hasVisibleItems = true;
+                } else {
+                    item.style.display = 'none'; // Oculta o item se o título não corresponder à busca
+                }
+            });
+    
+            // Exibe ou oculta a seção com base na existência de itens visíveis
+            if (hasVisibleItems) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+    
+    // Adiciona evento de input ao campo de busca
+    document.getElementById('searchInput').addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        filterContent(searchTerm);
+    });
+    
+    // Inicia o script
+    adicionarCapas();
+    document.querySelectorAll('section').forEach(section => {
+        section.style.display = 'block'; // Exibe todas as seções inicialmente
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
